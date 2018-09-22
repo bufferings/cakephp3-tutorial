@@ -5,11 +5,18 @@ services:
     command: php -v
     volumes:
       - .:/app
-      - ./docker/php.ini:/usr/local/etc/php/php.ini
+      - ./docker/app/php.ini:/usr/local/etc/php/php.ini
   php-web:
     build: ./docker
     volumes:
       - .:/app
-      - ./docker/php.ini:/usr/local/etc/php/php.ini
+      - ./docker/app/php.ini:/usr/local/etc/php/php.ini
     ports:
       - "8000:80"
+  mysql:
+    image: mysql:8.0.12
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: cake_cms
+    volumes:
+      - ./docker/mysql:/docker-entrypoint-initdb.d
