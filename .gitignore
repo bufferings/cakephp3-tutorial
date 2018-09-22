@@ -32,6 +32,7 @@ Thumbs.db
 .settings/*
 # JetBrains, aka PHPStorm, IntelliJ IDEA
 .idea/*
+*.iml
 # NetBeans
 nbproject/*
 # Visual Studio Code
