@@ -41,7 +41,8 @@ CREATE TABLE articles_tags (
 
 INSERT INTO users (email, password, created, modified)
 VALUES
-('cakephp@example.com', 'sekret', NOW(), NOW());
+-- The password is sekret
+('cakephp@example.com', '$2y$10$5Kt0hTY7uTf7tt58.lQiNePxjyolHuYQC.ZILgkjWgZJif8jb9HsO', NOW(), NOW());
 
 INSERT INTO articles (user_id, title, slug, body, published, created, modified)
 VALUES

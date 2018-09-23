@@ -128,4 +128,16 @@ class UsersController extends AppController
         $this->Flash->success('ログアウトしました。');
         return $this->redirect($this->Auth->logout());
     }
+
+    public function isAuthorized($user)
+    {
+        $userId = $this->request->getParam('pass.0');
+        if (!$userId) {
+            return false;
+        }
+
+        $user2 = $this->Users->get($userId);
+
+        return $user2->id === $user['id'];
+    }
 }

@@ -8,7 +8,7 @@ The base source codes are copied from:
 
 https://github.com/bufferings/phpstorm-docker-cakephp
 
-## How to check
+## How to run
 
 ```
 # Prepare Docker
@@ -17,8 +17,8 @@ https://github.com/bufferings/phpstorm-docker-cakephp
 # Install packages
 ❯ docker-compose run --rm php-cli composer install
 
-# Start Docker
+# Start
 ❯ docker-compose up
 
-
+# Access localhost:8000
 ```
