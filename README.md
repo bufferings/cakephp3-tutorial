@@ -20,5 +20,15 @@ https://github.com/bufferings/phpstorm-docker-cakephp
 # Start
 ❯ docker-compose up
 
-# Access localhost:8000
 ```
+
+Then, you can access
+
+* http://localhost:8000/articles
+* http://localhost:8000/users
+* etc...
+
+You can use this user to login
+
+* email: cakephp@example.com
+* password: sekret
