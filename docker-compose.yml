@@ -1,13 +1,13 @@
 version: '3'
 services:
   php-cli:
-    build: ./docker
+    build: ./docker/app
     command: php -v
     volumes:
       - .:/app
       - ./docker/app/php.ini:/usr/local/etc/php/php.ini
   php-web:
-    build: ./docker
+    build: ./docker/app
     volumes:
       - .:/app
       - ./docker/app/php.ini:/usr/local/etc/php/php.ini
